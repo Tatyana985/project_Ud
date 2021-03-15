@@ -56,11 +56,12 @@ console.log(personalMovieDB);
         'logan': '8.1'
     } */
 
-let first = prompt('Один из последних просмотренных фильмов?');
-let second = prompt('На сколько оцените его?');
+ //создаем переменные и вставляем их в обьект из 2го задания
+let a = prompt('Один из последних просмотренных фильмов?', ''),
+    b = prompt('На сколько оцените его?', ''),
+    c = prompt('Один из последних просмотренных фильмов?', ''),
+    d = prompt('На сколько оцените его?', '');
 
-let movies = {
-    lastMovie: `${first}`,
-    opinion: +`${second}`
-};
-console.log(movies);
+personalMovieDB.movies[a] = b; //можна было обратиться и через точку к переменным но оно часто вызывает ошибку. поэтому делаем это через []
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB);
